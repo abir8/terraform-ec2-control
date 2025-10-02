@@ -17,24 +17,24 @@ Usage:
 Security: Update `variables.tf` to restrict `my_ip_cidr` to your IP (not `0.0.0.0/0`) before applying in production.
 
 
-How to run Terraform (quick)
+How to run Terraform (quick):
 
-Install Terraform and AWS CLI, and configure AWS CLI:
-aws configure (enter access key, secret, region)
+- Install Terraform and AWS CLI, and configure AWS CLI:
+- aws configure (enter access key, secret, region)
 
 Init and apply:
 
-terraform init
-terraform apply
+`terraform init`
+`terraform apply`
 
 
-Terraform will show the plan. Type yes to apply. After successful apply, terraform output instance_id or check the outputs printed.
+Terraform will show the plan. Type yes to apply. After successful apply, terraform output `instance_id` or check the outputs printed.
 
 Use scripts:
 
-./start.sh $(terraform output -raw instance_id)
-./stop.sh  $(terraform output -raw instance_id)
-./terminate.sh $(terraform output -raw instance_id)
+- `./start.sh <instance_id>`
+- `./stop.sh  <instance_id>`
+- `./terminate.sh <instance_id>`
 
 
-Note: terminate.sh asks for confirmation before destroying the instance.
+Note: `terminate.sh` asks for confirmation before destroying the instance.
