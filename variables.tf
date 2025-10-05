@@ -19,13 +19,13 @@ variable "my_ip_cidr" {
 variable "create_key_pair" {
   description = "Whether to create an aws_key_pair resource from a provided public key"
   type        = bool
-  default     = false
+  default     = true
 }
 
 variable "key_name" {
   description = "Key name to use (if create_key_pair is true)"
   type        = string
-  default     = "terraform-example-key"
+  default     = "terraform-ashraf-key"
 }
 
 variable "public_key_path" {
